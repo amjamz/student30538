@@ -101,7 +101,7 @@ Vocabulary
 
 ```{python}
 #in same dir:  `.shx` and `.dbf`
-filepath = "data/shp/austin_pop_2019.shp"
+filepath = r"C:\Users\amuly\OneDrive\Documents\GitHub\student30538\before_lecture\spatial_9\data\shp\austin_pop_2019.shp"
 data = gpd.read_file(filepath)
 ```
 
@@ -117,7 +117,7 @@ GeoPackage is more modern, but you will encounter shapefiles everywhere you look
 ## Reading a GeoPackage `gpkg`
 
 ```{python}
-filepath = "data/austin_pop_2019.gpkg"
+filepath = r"C:\Users\amuly\OneDrive\Documents\GitHub\student30538\before_lecture\spatial_9\data\austin_pop_2019.gpkg"
 data = gpd.read_file(filepath)
 type(data)
 ```
@@ -228,7 +228,7 @@ data.plot(column="area_km2", legend=True).set_axis_off()
 
 (The textbook uses a slightly different file here, unclear why to us.)
 ```{python}
-filepath = "data/austin_pop_density_2019.gpkg"
+filepath = r"C:\Users\amuly\OneDrive\Documents\GitHub\student30538\before_lecture\spatial_9\data\austin_pop_density_2019.gpkg"
 data = gpd.read_file(filepath)
 ```
 
@@ -512,6 +512,7 @@ Step 3: find intersection between `data` and `dense_buffer`
 ```{python}
 near_dense = gpd.sjoin(data, dense_buffer, how="inner", predicate="intersects")
 near_dense.plot(color="blue", alpha=0.3).set_axis_off()
+len(near_dense)
 ```
 
 ## spatial join IV

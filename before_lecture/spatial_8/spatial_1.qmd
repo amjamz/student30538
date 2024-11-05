@@ -145,6 +145,7 @@ point.wkt    #gets WKT directly
 
 point3D = Point(9.26, -2.456, 0.57)
 print(point3D)
+point3D
 ```
 
 * `WKT` gives you a plaintext representation of where the point is. 
@@ -198,6 +199,7 @@ These two input methods produce the same output. No "right" way. Use whichever w
 line = LineString([point1, point2, point3])
 
 line_from_tuples = LineString([(2.2, 4.2), (7.2, -25.1), (9.26, -2.456)])
+print(line_from_tuples)
 ```
 
 ## `LineString` discussion questions
@@ -318,6 +320,16 @@ poly_with_hole
 2.  Create a square
 3.  Create a circle (hint: look up the `buffer` method in `shapely`)
 
+```{python}
+triangle = Polygon(shell=[(0,0), (0.5, 1), (1,0)])
+triangle
+
+square = Polygon(shell=[(0,0),(1,0),(1,1),(0,1)])
+square
+
+circle = Point(2, 1).buffer(1.5)
+circle
+```
 
 ## geo data in vectors: summary
 
