@@ -245,8 +245,11 @@ HTML **attributes** always have the following structure:
 
 1. Inspect the HTML code on the [Harris Specialization in Data Analytics (link)](https://harris.uchicago.edu/academics/design-your-path/specializations/specialization-data-analytics) page
 2. What is the tag associated with the text that starts with: "Students in the Master of Science in Computational Analysis and Public Policy..."? 
+    <strong>
 3. What are examples of other content associated with the same tag?
+    "Still have questions?"
 4. Look at attributes for tags with links. Some of them do not appear to be "full" links. Can you explain why?
+    They are extensions of an existing link to allow someone to select and go further on a shorter but full link.
 
 ## HTML to web scraping
 - Webscraping steps:
@@ -288,7 +291,7 @@ from bs4 import BeautifulSoup
 - `requests` allows you to open webpages. Usually use with URLs but in this case, we'll use it with a file on disk
 ```{python}
 #| echo: true
-with open(r'files/simple.html', 'r') as page:
+with open(r'C:\Users\amuly\OneDrive\Documents\GitHub\student30538\before_lecture\webscraping_1\files\simple.html') as page:
     text = page.read()
 ```
 
@@ -296,6 +299,7 @@ with open(r'files/simple.html', 'r') as page:
 - `lxml` is an external resource used by browsers to parse HTML
 ```{python}
 #| echo: true
+import lxml
 soup = BeautifulSoup(text, 'lxml')
 ```
 
