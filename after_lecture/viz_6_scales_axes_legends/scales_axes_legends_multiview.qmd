@@ -68,7 +68,7 @@ pd.read_json(antibiotics)
 
 ```{python}
 #| echo: false
-antibiotics = pd.read_json('data/burtin.json')
+antibiotics = pd.read_json(r'C:\Users\amuly\OneDrive\Documents\GitHub\student30538\before_lecture\viz_6_scales_axes_legends\data\burtin.json')
 ```
 
 ```{python}

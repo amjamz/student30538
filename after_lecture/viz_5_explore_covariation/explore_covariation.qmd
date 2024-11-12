@@ -172,7 +172,7 @@ movies = pd.read_json(movies_url)
 
 ```{python}
 #| echo: false
-movies = pd.read_json('data/movies.json')
+movies = pd.read_json(r'C:\Users\amuly\OneDrive\Documents\GitHub\student30538\before_lecture\viz_5_explore_covariation\data\movies.json')
 ```
 
 ## Covariation: a first binned scatter plot
@@ -300,10 +300,9 @@ Bonus: what is the headline of your plot and what are the sub-messages?
 ## Do-pair-share solution I
 
 ```{python}
-alt.Chart(penguins).mark_bar().encode(
-  alt.Y('average(body_mass_g):Q',  scale=alt.Scale(zero=False)),
-  alt.X('year:N'),
-  alt.Color('year:N')
+alt.Chart(penguins).mark_boxplot().encode(
+  alt.Y('body_mass_g:Q', scale=alt.Scale(domain=[2500, 6500])),
+  alt.X('year:N')
 )
 ```
 
