@@ -292,7 +292,7 @@ import pandas as pd
 ```{python}
 #| eval: false
 
-df = pd.read_csv("apps_for_class/covid/nyt_covid19_data.csv") 
+df = pd.read_csv(r"C:\Users\amuly\OneDrive\Documents\GitHub\student30538\before_lecture\shiny_11\apps_for_class\covid\nyt_covid19_data.csv") 
 print(df.head())
 print("First date: " + str(df['date'].min()))
 print("Last date: " + str(df['date'].max()))
